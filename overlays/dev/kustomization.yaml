@@ -1,0 +1,12 @@
+# overlays/dev/kustomization.yaml
+namespace: ambiente-dev-micro-python
+
+resources:
+  - ../../base
+
+patchesStrategicMerge:
+  - patch-backend-dashboard-deployment.yaml
+  - patch-backend-index-deployment.yaml
+  - patch-backend-login-deployment.yaml
+  - patch-backend-register-deployment.yaml
+  - patch-frontend-deployment.yaml
