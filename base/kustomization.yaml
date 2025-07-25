@@ -1,0 +1,12 @@
+# infra/base/kustomization.yaml
+resources:
+  - backend-dashboard-deployment.yaml
+  - backend-index-deployment.yaml
+  - backend-register-deployment.yaml
+  - backend-login-deployment.yaml
+  - frontend-deployment.yaml
+  - frontend-service.yaml
+  - backend-dashboard-service.yaml
+  - backend-index-service.yaml
+  - backend-register-service.yaml
+  - backend-login-service.yaml
