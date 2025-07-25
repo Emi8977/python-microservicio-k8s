@@ -8,5 +8,5 @@ spec:
     app: mi-backend-index
   ports:
     - protocol: TCP
-      port: 5000
-      targetPort: 5000
+      port: 80 #puerto en el que espera el ingress
+      targetPort: 5000 #puerto que escucha el dockerfile/servidor
