@@ -8,6 +8,6 @@ spec:
     app: mi-frontend
   ports:
     - protocol: TCP
-      port: 5010
+      port: 84
       targetPort: 5010
 
