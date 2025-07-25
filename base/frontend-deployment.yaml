@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mi-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mi-frontend
+  template:
+    metadata:
+      labels:
+        app: mi-frontend
+    spec:
+      containers:
+        - name: mi-frontend
+          image: emi8977/microservicio-front:REPLACEME
+          ports:
+            - containerPort: 80

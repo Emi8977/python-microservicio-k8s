@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mi-backend-dashboard
+spec:
+  template:
+    spec:
+      containers:
+        - name: mi-backend-dashboard
+          image: emi8977/microservicio-dashboard:REPLACEME

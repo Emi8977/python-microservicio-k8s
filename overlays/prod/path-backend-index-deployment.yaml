@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mi-backend-login
+spec:
+  template:
+    spec:
+      containers:
+        - name: mi-backend-index
+          image: emi8977/microservicio-index:REPLACEME

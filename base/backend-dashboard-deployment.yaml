@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mi-backend-login
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mi-backend-dashboard
+  template:
+    metadata:
+      labels:
+        app: mi-backend-dashboard
+    spec:
+      containers:
+        - name: mi-backend-dashboard
+          image: emi8977/microservicio-dashboard:REPLACEME
+          ports:
+            - containerPort: 80

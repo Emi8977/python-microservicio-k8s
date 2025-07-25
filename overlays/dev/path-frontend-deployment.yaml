@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mi-frontend
+spec:
+  template:
+    spec:
+      containers:
+        - name: mi-frontend
+          image: emi8977/microservicio-front:REPLACEME

@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mi-backend-register
+spec:
+  template:
+    spec:
+      containers:
+        - name: mi-backend-register
+          image: emi8977/microservicio-register:REPLACEME
