@@ -1,5 +1,5 @@
 # overlays/dev/kustomization.yaml
-namespace: ambiente-dev-micro-python
+namespace: ambiente-stg-micro-python
 
 resources:
   - ../../base
