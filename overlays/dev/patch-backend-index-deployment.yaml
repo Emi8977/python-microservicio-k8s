@@ -7,4 +7,4 @@ spec:
     spec:
       containers:
         - name: mi-backend-index
-          image: emi8977/microservicio-index:REPLACEME
+          image: emi8977/microservicio-index:dev-c85e558
