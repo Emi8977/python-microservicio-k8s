@@ -11,4 +11,4 @@ resources:
   - backend-register-service.yaml
   - backend-login-service.yaml
   - ingress.yaml
-  - ingress-controller-service.yaml
+#  - ingress-controller-service.yaml
