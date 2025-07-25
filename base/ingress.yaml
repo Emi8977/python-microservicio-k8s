@@ -10,27 +10,27 @@ spec:
   - host: atale.comercial.cloud
     http:
       paths:
-      - path: /login
-        pathType: Prefix
-        backend:
-          service:
-            name: mi-backend-login-service
-            port:
-              number: 80
-      - path: /register
-        pathType: Prefix
-        backend:
-          service:
-            name: mi-backend-register-service
-            port:
-              number: 80
       - path: /dashboard
         pathType: Prefix
         backend:
           service:
             name: mi-backend-dashboard-service
             port:
-              number: 80
+              number: 83
+      - path: /login
+        pathType: Prefix
+        backend:
+          service:
+            name: mi-backend-login-service
+            port:
+              number: 82
+      - path: /register
+        pathType: Prefix
+        backend:
+          service:
+            name: mi-backend-register-service
+            port:
+              number: 81
       - path: /
         pathType: Prefix
         backend:
