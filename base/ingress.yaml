@@ -3,38 +3,46 @@ kind: Ingress
 metadata:
   name: atale-ingress
   annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/use-regex: "true"
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    #nginx.ingress.kubernetes.io/rewrite-target: /$1
 spec:
   rules:
   - host: atale.comercial.cloud
     http:
       paths:
-      - path: /dashboard
-        pathType: Prefix
-        backend:
-          service:
-            name: mi-backend-dashboard-service
-            port:
-              number: 83
-      - path: /login
-        pathType: Prefix
-        backend:
-          service:
-            name: mi-backend-login-service
-            port:
-              number: 82
-      - path: /register
-        pathType: Prefix
-        backend:
-          service:
-            name: mi-backend-register-service
-            port:
-              number: 81
-      - path: /
+      # Frontend estático (index.html y assets)
+      - path: /api(/|$)(.*)
         pathType: Prefix
         backend:
           service:
             name: mi-backend-index-service
             port:
               number: 80
+
+      # Servicio login (API + plantilla HTML opcional)
+      - path: /api/login(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: mi-backend-login-service
+            port:
+              number: 82
+
+      # Servicio register
+      - path: /api/register(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: mi-backend-register-service
+            port:
+              number: 81
+
+      # Servicio dashboard
+      - path: /api/dashboard(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: mi-backend-dashboard-service
+            port:
+              number: 83
