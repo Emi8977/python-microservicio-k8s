@@ -7,4 +7,4 @@ spec:
     spec:
       containers:
         - name: mi-backend-dashboard
-          image: emi8977/microservicio-dashboard:dev-bb00564
+          image: emi8977/microservicio-dashboard:dev-bbdfa03
