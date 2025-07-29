@@ -11,7 +11,7 @@ spec:
   - host: atale.comercial.cloud
     http:
       paths:
-      # Frontend estático (index.html y assets)
+      # Frontend (sirve HTML y estáticos)
       - path: /(/|$)(.*)
         pathType: Prefix
         backend:
@@ -20,7 +20,7 @@ spec:
             port:
               number: 80
 
-      # Servicio login (API + plantilla HTML opcional)
+      # Login API
       - path: /api/login(/|$)(.*)
         pathType: Prefix
         backend:
@@ -29,7 +29,7 @@ spec:
             port:
               number: 82
 
-      # Servicio register
+      # Register API
       - path: /api/register(/|$)(.*)
         pathType: Prefix
         backend:
@@ -38,8 +38,8 @@ spec:
             port:
               number: 81
 
-      # Servicio dashboard
-      - path: /api/dashboard(/|$)(.*)
+      # Dashboard (HTML)
+      - path: /dashboard(/|$)(.*)
         pathType: Prefix
         backend:
           service:
