@@ -12,7 +12,7 @@ spec:
     http:
       paths:
       # Frontend (sirve HTML y estáticos)
-      - path: /(/|$)(.*)
+      - path: /
         pathType: Prefix
         backend:
           service:
@@ -21,7 +21,7 @@ spec:
               number: 80
 
       # Login API
-      - path: /api/login(/|$)(.*)
+      - path: /api/login
         pathType: Prefix
         backend:
           service:
@@ -30,7 +30,7 @@ spec:
               number: 82
 
       # Register API
-      - path: /api/register(/|$)(.*)
+      - path: /api/register
         pathType: Prefix
         backend:
           service:
@@ -39,10 +39,11 @@ spec:
               number: 81
 
       # Dashboard (HTML)
-      - path: /dashboard(/|$)(.*)
+      - path: /dashboard
         pathType: Prefix
         backend:
           service:
             name: mi-backend-dashboard-service
             port:
               number: 83
+
