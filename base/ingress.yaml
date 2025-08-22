@@ -48,7 +48,7 @@ spec:
               number: 81
 
       # Dashboard (HTML)
-      - path: /api/dashboard
+      - path: /dashboard
         pathType: Prefix
         backend:
           service:
