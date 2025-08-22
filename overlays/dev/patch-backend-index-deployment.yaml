@@ -7,4 +7,4 @@ spec:
     spec:
       containers:
         - name: mi-backend-index
-          image: emi8977/microservicio-index:dev-74d512b
+          image: emi8977/microservicio-index:dev-bf405cb
