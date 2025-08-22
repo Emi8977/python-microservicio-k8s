@@ -9,7 +9,6 @@ spec:
   - host: atale.comercial.cloud
     http:
       paths:
-      # Frontend HTML + estáticos
       - path: /
         pathType: Prefix
         backend:
@@ -17,8 +16,27 @@ spec:
             name: mi-backend-index-service
             port:
               number: 80
-
-      # Login API
+      - path: /login
+        pathType: Prefix
+        backend:
+          service:
+            name: mi-backend-index-service
+            port:
+              number: 80
+      - path: /register
+        pathType: Prefix
+        backend:
+          service:
+            name: mi-backend-index-service
+            port:
+              number: 80
+      - path: /dashboard
+        pathType: Prefix
+        backend:
+          service:
+            name: mi-backend-dashboard-service
+            port:
+              number: 83
       - path: /api/login
         pathType: Prefix
         backend:
@@ -26,8 +44,6 @@ spec:
             name: mi-backend-login-service
             port:
               number: 82
-
-      # Register API
       - path: /api/register
         pathType: Prefix
         backend:
@@ -36,11 +52,3 @@ spec:
             port:
               number: 81
 
-      # Dashboard
-      - path: /dashboard
-        pathType: Prefix
-        backend:
-          service:
-            name: mi-backend-dashboard-service
-            port:
-              number: 83
