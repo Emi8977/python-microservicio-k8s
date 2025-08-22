@@ -7,4 +7,4 @@ spec:
     spec:
       containers:
         - name: mi-backend-login
-          image: emi8977/microservicio-login:dev-47fca14
+          image: emi8977/microservicio-login:dev-251ea84
