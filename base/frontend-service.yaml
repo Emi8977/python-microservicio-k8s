@@ -6,8 +6,9 @@ spec:
   type: NodePort
   selector:
     app: mi-frontend
-  ports:
-    - protocol: TCP
-      port: 84
-      targetPort: 5010
+ports:
+  - protocol: TCP
+    port: 80       # puerto interno del Service
+    targetPort: 80 # puerto del contenedor (Nginx)
+
 
