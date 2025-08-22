@@ -16,7 +16,7 @@ spec:
           service:
             name: mi-backend-index-service
             port:
-              number: 5000
+              number: 80
 
       # Login API
       - path: /api/login
