@@ -14,9 +14,9 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: mi-frontend-service
+            name: mi-backend-index-service
             port:
-              number: 80
+              number: 5000
 
       # Login API
       - path: /api/login
