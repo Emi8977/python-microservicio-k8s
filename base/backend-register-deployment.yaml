@@ -16,4 +16,4 @@ spec:
         - name: mi-backend-register
           image: emi8977/microservicio-register:REPLACEME
           ports:
-            - containerPort: 80
+            - containerPort: 5001
