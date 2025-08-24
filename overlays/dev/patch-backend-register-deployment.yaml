@@ -7,4 +7,4 @@ spec:
     spec:
       containers:
         - name: mi-backend-register
-          image: emi8977/microservicio-register:dev-039625e
+          image: emi8977/microservicio-register:dev-7b1c9ea
