@@ -8,5 +8,5 @@ spec:
     app: mi-backend-login
   ports:
     - protocol: TCP
-      port: 82
+      port: 80
       targetPort: 5002
