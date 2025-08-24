@@ -19,7 +19,7 @@ spec:
               number: 80
 
       # Login API (/auth/*)
-      - path: /auth
+      - path: /auth/login
         pathType: Prefix
         backend:
           service:
@@ -28,7 +28,7 @@ spec:
               number: 80
 
       # Register API (/users/*)
-      - path: /users
+      - path: /users/register
         pathType: Prefix
         backend:
           service:
