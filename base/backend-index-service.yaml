@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mi-backend-index-service
+  name: mi-backend-login-service
 spec:
-  type: NodePort
+  type: ClusterIP   # mejor que NodePort si usás Ingress
   selector:
-    app: mi-backend-index
+    app: mi-backend-login
   ports:
     - protocol: TCP
-      port: 80 #puerto en el que espera el ingress
-      targetPort: 5000 #puerto que escucha el dockerfile/servidor
+      port: 80        # <-- siempre 80 hacia Ingress
+      targetPort: 5002 # <-- el puerto real de tu contenedor Flask
