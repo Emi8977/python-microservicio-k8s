@@ -36,6 +36,24 @@ spec:
             port:
               number: 80
 
+      # Dashboard API
+      - path: /login
+        pathType: Prefix
+        backend:
+          service:
+            name: mi-frontend-service
+            port:
+              number: 80
+
+      # Dashboard API
+      - path: /register
+        pathType: Prefix
+        backend:
+          service:
+            name: mi-frontend-service
+            port:
+              number: 80
+
       # Frontend (catch-all)
       - path: /
         pathType: Prefix
