@@ -16,4 +16,4 @@ spec:
         - name: mi-backend-login
           image: emi8977/microservicio-login:REPLACEME
           ports:
-            - containerPort: 80
+            - containerPort: 5002
