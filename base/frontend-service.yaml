@@ -8,7 +8,7 @@ spec:
     app: mi-frontend
   ports:
     - protocol: TCP
-      port: 80       # puerto interno del Service
+      port: 84       # puerto interno del Service
       targetPort: 80 # puerto del contenedor (Nginx)
 
 
