@@ -4,11 +4,12 @@ metadata:
   name: atale-ingress
   annotations:
     #nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    # Habilita CORS desde el Ingress
     nginx.ingress.kubernetes.io/enable-cors: "true"
     nginx.ingress.kubernetes.io/cors-allow-origin: "https://atale.comercial.cloud"
+    nginx.ingress.kubernetes.io/cors-allow-methods: "GET, POST, OPTIONS"
+    nginx.ingress.kubernetes.io/cors-allow-headers: "Content-Type, Authorization"
     nginx.ingress.kubernetes.io/cors-allow-credentials: "true"
-    nginx.ingress.kubernetes.io/ssl-redirect: "true"  # fuerza HTTPS
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
 spec:
   rules:
   - host: atale.comercial.cloud
