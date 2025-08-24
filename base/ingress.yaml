@@ -25,7 +25,7 @@ spec:
             port:
               number: 80
 
-      - path: /users/register
+      - path: /users/api/register
         pathType: Prefix
         backend:
           service:
