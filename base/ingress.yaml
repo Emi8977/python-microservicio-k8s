@@ -32,7 +32,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: mi-backend-dashboard-service
+            name: mi-frontend-service
             port:
               number: 80
 
