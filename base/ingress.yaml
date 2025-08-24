@@ -16,7 +16,7 @@ spec:
           service:
             name: mi-frontend-service
             port:
-              number: 84
+              number: 80
 
       # Login API (/auth/*)
       - path: /auth
