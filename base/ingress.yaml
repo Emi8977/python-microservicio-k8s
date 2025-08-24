@@ -27,7 +27,7 @@ spec:
           service:
             name: mi-backend-login-service
             port:
-              number: 80
+              number: 82
 
       # Register API (/users/*)
       - path: /register(/|$)(.*)
@@ -36,7 +36,7 @@ spec:
           service:
             name: mi-backend-register-service
             port:
-              number: 80
+              number: 81
 
       # Dashboard API (/dashboard/*)
       - path: /dashboard(/|$)(.*)
@@ -45,5 +45,5 @@ spec:
           service:
             name: mi-backend-dashboard-service
             port:
-              number: 80
+              number: 83
 
