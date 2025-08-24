@@ -7,4 +7,4 @@ spec:
     spec:
       containers:
         - name: mi-frontend
-          image: emi8977/microservicio-front:dev-b84566d
+          image: emi8977/microservicio-front:dev-b46e4d4
