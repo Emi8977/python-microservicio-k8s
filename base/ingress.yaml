@@ -3,8 +3,6 @@ kind: Ingress
 metadata:
   name: atale-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
-    nginx.ingress.kubernetes.io/use-regex: "true"
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
@@ -12,7 +10,7 @@ spec:
     http:
       paths:
       # Frontend (sirve HTML + JS + CSS)
-      - path: /(.*)
+      - path: /
         pathType: Prefix
         backend:
           service:
@@ -21,29 +19,29 @@ spec:
               number: 80
 
       # Login API (/auth/*)
-      - path: /login(/|$)(.*)
+      - path: /auth
         pathType: Prefix
         backend:
           service:
             name: mi-backend-login-service
             port:
-              number: 82
+              number: 80
 
       # Register API (/users/*)
-      - path: /register(/|$)(.*)
+      - path: /users
         pathType: Prefix
         backend:
           service:
             name: mi-backend-register-service
             port:
-              number: 81
+              number: 80
 
       # Dashboard API (/dashboard/*)
-      - path: /dashboard(/|$)(.*)
+      - path: /dashboard
         pathType: Prefix
         backend:
           service:
             name: mi-backend-dashboard-service
             port:
-              number: 83
+              number: 80
 
